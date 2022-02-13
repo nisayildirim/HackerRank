@@ -1,5 +1,5 @@
 
-//Diagonal Difference Solution 
+//Diagonal Difference Solution :)
 
 
 function diagonalDifference(arr) {
