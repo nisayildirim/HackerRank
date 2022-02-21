@@ -1,65 +1,19 @@
-// loading... :)
-//trial 1
+// Time Conversion Solution :)
 
 function timeConversion(s) {
-    var pmRegExp = /PM/i;
-    var pmReplace = s.replace(pmRegExp,'');
-    var pmSplit = pmReplace.split(":");
-
-
-
-    var amRegExp = /AM/i;
-    var amReplace = s.replace(amRegExp,'');
-    var amSplit = amReplace.split(":");
+    // divide into smaller pieces
+    var ampm =s.substring(8);               //returns str
+    var wholeTime = s.substring(0,8);  
+    var timesArr=wholeTime.split(":");      //returns arr
     
-    
-    
- // trial 2
- function timeConversion(s) {
-    var pmPairs  = {1:"13",
-                    2:"14",
-                    3:"15",
-                    4:"16",
-                    5:"17",
-                    6:"18",
-                    7:"19",
-                    8:"20",
-                    9:"21",
-                    10:"22",
-                    11:"23",
-                    12:"12"};
-    var amPairs = {1:"1",
-                    2:"2",
-                    3:"3",
-                    4:"4",
-                    5:"5",
-                    6:"6",
-                    7:"7",
-                    8:"8",
-                    9:"9",
-                    10:"10",
-                    11:"11",
-                    12:"00"}
-                    
-    if (s.replace(/PM/i,"")) {
-        var pmArr = s.split(":");
-        return pmArr.map(pm => [pm,pair[pm]]);
+    if (ampm==="PM") {                      //if pm + 12 except 12
+        if (timesArr[0]!=="12") {
+            timesArr[0] = parseInt(timesArr[0]) + 12;
+        }
+    }else {    // =="AM"
+        if (timesArr[0]=="12") {
+            timesArr[0] = "00";
+        }
     }
-        else if (s.replace(/AM/i,"")) {
-        var amArr = s.split(":");
-        return pmArr.map(pm => [pm,pair[pm]]);
-        
-    }
-}
-    
-//trial 3
-
-function timeConversion(s) {
-    var sSplit = s.split(":");
-
-    if sSplit[2]
-
-    var pm  =+12
-    var am =12ise 0
-
+    return timesArr.join(":");
 }
