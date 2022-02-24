@@ -1,3 +1,5 @@
+//Breaking The Records Solution :)
+
 function breakingRecords(scores) {
     var highestScore = scores[0],
         lowestScore = scores[0],
@@ -16,6 +18,6 @@ function breakingRecords(scores) {
             continue;
         }
     }
-    return [maxCounter,mşnCounter];
+    return [maxCounter,minCounter];
 
 }
